@@ -1,0 +1,48 @@
+ {% extends 'base.html' %}
+ {% block 'content' %}
+ <!-- Page Header -->
+ <header class="masthead" style="background-image: url('{{post.photo}}')">
+     <div class="overlay"></div>
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-8 col-md-10 mx-auto">
+                 <div class="site-heading">
+                     <h1>Photography</h1>
+                     <span class="subheading">Education by Foto-Edu</span>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </header>
+
+ <!-- Main Content -->
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-8 col-md-10 mx-auto">
+             {% for post in posts %}
+
+             <div class="post-preview">
+                 <a href="{% url 'blog:post' post.slug %}">
+                     <h5 class="post-title">
+                         {{ post.title }}
+
+                     </h5>
+                     <!-- <h3 class="post-subtitle">
+            {{post.description | safe }}
+          </h3> -->
+                 </a>
+                 <p class="post-meta"> <small> <span class="badge badge-pill badge-light">{{ post.time_to_read }}
+                         </span> reading time. Posted on
+                         {{ post.created_at }} </small></p>
+             </div>
+             <hr>
+             {% endfor %}
+
+             <!-- Pager -->
+             <!-- <div class="clearfix">
+                 <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+             </div> -->
+         </div>
+     </div>
+ </div>
+ {% endblock %}

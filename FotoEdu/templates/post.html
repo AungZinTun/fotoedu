@@ -1,0 +1,40 @@
+ {% extends 'base.html' %}
+ {% block 'content' %}
+ <!-- Page Header -->
+ <header class="masthead" >
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <span class="subheading"> {{ post.title }}</span>
+                </div>
+            </div>
+        </div>
+         <p class="post-meta"> <small> <span class="badge badge-pill badge-light">{{ post.time_to_read }}
+                    </span> reading time. Posted on
+        {{ post.created_at }} </small></p>
+    </div>
+</header>
+ <!-- Main Content -->
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-8 col-md-10 mx-auto">
+             <div class="post-preview">
+               
+                    
+                     <p class="">
+                         {{post.description | safe }}
+                     </p>
+               
+
+             </div>
+             <hr>
+
+
+             <!-- Pager -->
+
+         </div>
+     </div>
+ </div>
+ {% endblock %}
