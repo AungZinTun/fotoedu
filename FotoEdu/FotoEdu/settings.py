@@ -89,7 +89,7 @@ else:
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'fotoedu',
         'USER': 'root',
-        'PASSWORD': 'adin@1234',
+        'PASSWORD': 'admin@1234',
         'HOST': 'localhost',
         'PORT': '',
     }
