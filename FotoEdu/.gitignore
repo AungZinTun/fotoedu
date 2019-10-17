@@ -2,7 +2,7 @@
 # __pycache__/
 # *.py[cod]
 # *$py.class
-media/uploads/
+# media/uploads/
 
 # # C extensions
 # *.so
