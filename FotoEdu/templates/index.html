@@ -1,7 +1,7 @@
  {% extends 'base.html' %}
  {% block 'content' %}
  <!-- Page Header -->
- <header class="masthead" style="background-image: url('{{post.photo}}')">
+ <header class="masthead" style="background-image: url('/static/img/home-bg.jpg')">
      <div class="overlay"></div>
      <div class="container">
          <div class="row">
@@ -31,8 +31,8 @@
             {{post.description | safe }}
           </h3> -->
                  </a>
-                 <p class="post-meta"> <small> <span class="badge badge-pill badge-light">{{ post.time_to_read }}
-                         </span> reading time. Posted on
+                 <p class="post-meta"> <small> <span class="badge badge-pill badge-light"> {% if post.read_time %}{{ post.time_to_read }}
+                </span> reading time. {% endif %} Posted on
                          {{ post.created_at }} </small></p>
              </div>
              <hr>
