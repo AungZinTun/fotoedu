@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o=&a2rrzxt45+!%$*-fiw*%vp9^=$j(7-op6^z)hmj9at8eei4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['fotoedu.info',"127.0.0.1"]
 
